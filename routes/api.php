@@ -8,7 +8,7 @@ Route::group(['middleware' => ['cors']], function()
 {
     // Auth
     Route::post('login', 'UsersController@login');
-    Route::post('register', 'UsersController@register');
+    Route::post('register', 'UsersController@store');
 
 
     // Don't need to be logged
