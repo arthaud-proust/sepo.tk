@@ -1,0 +1,65 @@
+<Ifmodule mod_headers.c>
+   SetEnvIf Origin "^(.*\.domain\.com)$" ORIGIN_SUB_DOMAIN=$1
+   Header set Access-Control-Allow-Origin "%{ORIGIN_SUB_DOMAIN}e" env=ORIGIN_SUB_DOMAIN
+   Header set Access-Control-Allow-Methods: "*"
+   Header set Access-Control-Allow-Headers: "Origin, X-Requested-With, Content-Type, Accept, Authorization"
+
+     <FilesMatch "\\.(ico|jpe?g|png|gif|swf)$">
+  Header set Cache-Control "max-age=2592000, public"
+  </FilesMatch>
+
+  <FilesMatch "\\.(css)$">
+  Header set Cache-Control "max-age=604800, public"
+  </FilesMatch>
+
+  <FilesMatch "\\.(js)$">
+  Header set Cache-Control "max-age=216000, private"
+  </FilesMatch>
+
+  <FilesMatch "\\.(x?html?|php)$">
+  Header set Cache-Control "max-age=600, private, must-revalidate"
+  </FilesMatch>
+</Ifmodule>
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+#RewriteRule ^index\.html$ - [L]
+  RewriteRule ^index\.html$ - 
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule . /index.html [L]
+</IfModule>
+
+<IfModule mod_expires.c>
+  # Enable expirations
+  ExpiresActive On 
+  # Default directive
+  ExpiresDefault "access plus 1 month"
+
+  # My favicon
+  ExpiresByType image/x-icon "access plus 1 year”
+
+  # Images
+  ExpiresByType image/gif "access plus 1 month"
+  ExpiresByType image/png "access plus 1 month"
+  ExpiresByType image/jpg "access plus 1 month"
+  ExpiresByType image/jpeg "access plus 1 month"
+
+  # CSS
+  ExpiresByType text/css "access 1 minute”
+
+  # Javascript
+  ExpiresByType application/javascript "access plus 1 minute"
+</IfModule>
+
+ErrorDocument 400 /index.html
+ErrorDocument 401 /index.html
+ErrorDocument 403 /index.html
+ErrorDocument 404 https://sepo.tk/404
+ErrorDocument 405 /index.html
+ErrorDocument 408 /index.html
+ErrorDocument 414 /index.html
+ErrorDocument 500 /index.html
+ErrorDocument 502 /index.html
+ErrorDocument 504 /index.html

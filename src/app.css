@@ -1,0 +1,61 @@
+:root {
+  /* -- color -- */
+  /* yellow */
+  --y1: #dd9543;
+  /* -- green -- */
+  --g-3: #5F9062;
+  --g-2: #6BA26E;
+  --g-1: #77B47A;
+  --g0: #82C586;
+  --g1: #8DCA91;
+  --g2: #AFDAB2;
+  --g3: #C6E4C8;
+
+}
+
+
+/* -- Background -- */
+/* .application {background: none !important;} */
+@media screen and (max-width: 700px) and (orientation: landscape), (min-width: 700px) and (orientation: landscape) {
+  body.bg0 {background: url(assets/large/0.jpg) no-repeat;}
+  body.bg1 {background: url(assets/large/1.jpg) no-repeat;}
+  body.bg2 {background: url(assets/large/2.jpg) no-repeat;}
+  body.bg3 {background: url(assets/large/3.jpg) no-repeat;}
+  body.bg4 {background: url(assets/large/4.jpg) no-repeat;}
+  body.bg5 {background: url(assets/large/5.jpg) no-repeat;}
+}
+@media screen and (max-width: 700px) and (orientation: portrait), (min-width: 700px) and (orientation: portrait) {
+  body.bg0 {background: url(assets/mobile/0.jpg) no-repeat;}
+  body.bg1 {background: url(assets/mobile/1.jpg) no-repeat;}
+  body.bg2 {background: url(assets/mobile/2.jpg) no-repeat;}
+  body.bg3 {background: url(assets/mobile/3.jpg) no-repeat;}
+  body.bg4 {background: url(assets/mobile/4.jpg) no-repeat;}
+  body.bg5 {background: url(assets/mobile/5.jpg) no-repeat;}
+}
+/* @media  {body.bg3 {background: url(assets/large/3.jpg) no-repeat;}} */
+/* @media (min-width: 700px) and (orientation: portrait) {body.bg3 {background: url(assets/mobile/3.jpg) no-repeat;}} */
+
+body {background-color: #333;background-attachment: fixed !important; background-position-x: center !important;text-rendering: optimizeLegibility;}
+kbd {letter-spacing: 0.5px;}
+@media (max-width: 700px) and (orientation: landscape) {body {background-size: 100vw auto !important;}}
+@media (min-width: 700px) and (orientation: landscape), (min-width: 700px) and (orientation: portrait) {body {background-size: cover !important;}}
+@media (max-width: 700px) and (orientation: portrait) {body {background-size: auto 100vh !important;}}
+/* @media (min-width: 700px) and (orientation: portrait) {body {background-size: cover !important;}} */
+
+
+
+.v-card:not(.dialog) {
+  border-radius: 7px !important;
+  background: rgba(17, 17, 17, 0.925) !important;
+}
+
+.dialog {
+  border-radius: 7px !important;
+  background: #070707 !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: initial;
+}
+
+p {color: #c4c4c4;}

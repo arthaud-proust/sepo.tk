@@ -1,0 +1,34 @@
+/* Class border -radius */
+*[bd-0], .bd-0 {border-radius: 0px !important;}
+*[bd-1], .bd-1 {border-radius: 3px !important;}
+*[bd-2], .bd-2 {border-radius: 5px !important;}
+*[bd-3], .bd-3 {border-radius: 7px !important;}
+*[bd-4], .bd-4 {border-radius: 10px !important;}
+*[bd-5], .bd-5 {border-radius: 13px !important;}
+
+
+
+.icon
+{
+    display: flex;
+    flex-direction: column-reverse;
+    text-align: center;
+}
+
+.icon span
+{
+    font-size: .9em;
+    text-transform: none;
+}
+
+.v-toolbar.large {
+    background: rgba(0, 0, 0, 0.336) !important;
+}
+.v-toolbar.mobile {
+    background: rgba(21,21,21,.863)!important;
+}
+
+.v-toolbar h1 {
+    font-weight: initial;
+    font-size: 0.9em;
+}
