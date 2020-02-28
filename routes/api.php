@@ -8,7 +8,6 @@ Route::group(['middleware' => ['cors']], function()
 {
     // Auth
     Route::post('login', 'UsersController@login');
-    Route::post('register', 'UsersController@store');
 
 
     // Don't need to be logged
@@ -48,4 +47,6 @@ Route::group(['middleware' => ['jwt.auth']], function()
     Route::post('contact/{name}/edit', 'ContactsController@update');
 
     Route::post('contact/{name}/delete', 'ContactsController@destroy');
+
+    Route::post('register', 'UsersController@store');
 });
