@@ -104,7 +104,7 @@ export default {
     postProject () {
       axios({
         method: 'post',
-        url: 'https://api.sepo.tk/public/api/subject/new',
+        url: 'https://api.sepo.tk/api/subject/new',
         headers: {
           Authorization: `Bearer ${this.jwt}`
         },

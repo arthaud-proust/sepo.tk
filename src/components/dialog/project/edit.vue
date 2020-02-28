@@ -88,7 +88,7 @@ export default {
     postEdit () {
       axios({
         method: 'post',
-        url: `https://api.sepo.tk/public/api/project/${this.name}/edit`,
+        url: `https://api.sepo.tk/api/project/${this.name}/edit`,
         headers: {
           Authorization: `Bearer ${this.jwt}`
         },

@@ -57,7 +57,7 @@ export default {
     postDelete () {
       axios({
         method: 'post',
-        url: `https://api.sepo.tk/public/api/project/${this.name}/delete`,
+        url: `https://api.sepo.tk/api/project/${this.name}/delete`,
         headers: {
           Authorization: `Bearer ${this.jwt}`
         },

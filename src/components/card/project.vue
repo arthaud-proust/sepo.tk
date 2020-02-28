@@ -18,7 +18,7 @@
       <kbd class="ma-1 pa-1 caption" v-if="lang" itemprop="category">{{lang}}</kbd>
       <v-spacer ></v-spacer>
       <v-btn color="grey lighten-2" class="text-none mt-3" light v-if="href" :to="href" itemprop="url">Découvrir</v-btn>
-      <v-btn color="grey lighten-2" class="text-none mt-3" light v-if="link" :href="link" itemprop="url">Découvrir</v-btn>
+      <v-btn color="grey lighten-2" class="text-none mt-3" light v-if="link" :href="link" itemprop="url" target="blank">Découvrir</v-btn>
     </v-card-actions>
   </v-card>
 </template>

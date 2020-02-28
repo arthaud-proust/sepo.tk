@@ -17,7 +17,7 @@ const mutations = {
 const actions = {
   fetchCards ({ commit }) {
     // eslint-disable-next-line
-    axios.get(`https://api.sepo.tk/public/api/cards`).then (response => { commit('setCards', response.data.projects); commit('setCardsLoading', false) }).catch (e => { commit('setCardsLoading', false); this.dispatch('alert/newAlert', { type: 'error', content: e, show: true }) })
+    axios.get(`https://api.sepo.tk/api/cards`).then (response => { commit('setCards', response.data.projects); commit('setCardsLoading', false) }).catch (e => { commit('setCardsLoading', false); this.dispatch('alert/newAlert', { type: 'error', content: e, show: true }) })
   }
 }
 
